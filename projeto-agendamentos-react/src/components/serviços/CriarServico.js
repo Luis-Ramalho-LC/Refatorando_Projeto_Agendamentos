@@ -1,12 +1,10 @@
-import supabase from '../config/supabaseClient'
+import supabase from '../../config/supabaseClient'
 import {useState} from 'react'
-import {useNavigate} from 'react-router-dom'
-import Header from './Header'
-import Footer from './Footer'
+import Header from '../Header'
+import Footer from '../Footer'
 import MostrarServico from './MostrarServico'
 
-const CriarSevico = () => {
-    const navigate = useNavigate()
+const CriarServico = () => {
     const [nome, setNome] = useState('')
     const [preco, setPreco] = useState('')
     const [tempo, setTempo] = useState('')
@@ -23,9 +21,9 @@ const CriarSevico = () => {
         const data = await supabase
             .from('Serviços')
             .insert([{nome, preco, tempo}])
-
+            console.log(data)
             setFormError(null)
-            navigate('/')
+            document.location.reload()
     }
 
     return(
@@ -53,4 +51,4 @@ const CriarSevico = () => {
     )
 }
 
-export default CriarSevico
+export default CriarServico

@@ -2,23 +2,23 @@ import FullCalendar from '@fullcalendar/react'
 //import dayGridPlugin from '@fullcalendar/daygrid'
 import listPlugin from '@fullcalendar/list';
 //import timeGridPlugin from '@fullcalendar/timegrid'
-import supabase from '../config/supabaseClient'
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
+import supabase from '../config/supabaseClient';
 
 export default function Calendar() {
-  const [agendamentos, setAgendamentos] = useState(null)
-
-  useEffect(() => {
-    const fetchAgendamentos = async () => {
-      const {data} = await supabase
-        .from('agendamentos')
-        .select()
-
-        setAgendamentos(data)
-      }
-      fetchAgendamentos()
-    }, [])
+  const [agendamentos, setAgendamentos] = useState("")
     
+    useEffect(() => {
+        const fetchAgendamentos = async() => {
+            const data = await supabase
+                .from('agendamentos')
+                .select()
+    
+                setAgendamentos(data.data)
+        }
+        fetchAgendamentos()
+    }, []);
+
     return (
     <FullCalendar
       plugins = {[ listPlugin ]}
