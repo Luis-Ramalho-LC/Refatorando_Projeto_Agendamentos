@@ -12,6 +12,7 @@ function MostrarAgendamentos(){
                 <div className="listaAgendamentos">
                     {agendamentos.map(agendamento => (
                         (arrayTipoDoServico = agendamento.tipoDoServico.split('/')),
+                        (
                         <div key={agendamento.id} className="card text-bg-secondary mb-3" style={{maxWidth: "20rem", margin: "auto"}}>
                             <h2 className="card-header">{agendamento.title}</h2>
                             <div className="card-body">
@@ -21,10 +22,11 @@ function MostrarAgendamentos(){
                                 <h5 className="card-text">Serviço: {arrayTipoDoServico[1]}</h5>
                             </div>
                             <div className="card-footer" style={{display: "flex", justifyContent: "space-between"}}>
-                                <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Editar</button>
+                                <button className="btn btn-primary" >Editar</button>
                                 <button className="btn btn-danger" onClick={() => DeletarAgendamento(agendamento.id)}>Excluir</button>
                             </div>
                         </div>
+                        )
                     ))}
                 </div>
             )}

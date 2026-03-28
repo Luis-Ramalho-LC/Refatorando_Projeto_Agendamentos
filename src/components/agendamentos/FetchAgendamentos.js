@@ -7,14 +7,14 @@ function FetchAgendamentos(){
     useEffect(() => {
         const fetchAgendamentos = async() => {
             const data = await supabase
-                .from('agendamentos')
+                .from("agendamentos")
                 .select()
     
                 setAgendamentos(data.data)
         }
         fetchAgendamentos()
     }, []);
-    return(agendamentos)
+    return agendamentos;
 }
 
 export default FetchAgendamentos

@@ -25,7 +25,7 @@ const CriarAgendamento = () => {
     start = dataAgendada + "T" + horarioInicial;
     end = moment(start, "YYYY/M/D h:m").add(arrayTipoDoServico[0], "m");
     
-    if (!title || !start || !end || tipoDoServico == "") {
+    if (!title || !start || !end || tipoDoServico === "") {
       setFormError("Preencha todos os campos corretamente!");
       return;
     }
