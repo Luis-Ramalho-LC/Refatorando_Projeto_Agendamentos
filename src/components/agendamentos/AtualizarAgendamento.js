@@ -6,8 +6,8 @@ import supabase from "../../config/supabaseClient"
 import FetchServicos from "../serviços/FetchServicos"
 import moment from "moment"
 
-const AtualizarServico = () => {
-    const {id} = useParams()
+const AtualizarAgendamento = () => {
+    const {agendamentosId} = useParams()
     const navigate = useNavigate()
     const servicos = FetchServicos()
 
@@ -25,11 +25,11 @@ const AtualizarServico = () => {
             const {data, error} = await supabase
                 .from('agendamentos')
                 .select()
-                .eq('id', id)
+                .eq('id', agendamentosId)
                 .single()
 
             if(error){
-                navigate('/', {replace: true})
+                navigate('/CriarAgendamento', {replace: true})
             }
             if(data){
                 setTitle(data.title)
@@ -38,13 +38,11 @@ const AtualizarServico = () => {
                 setTipoDoServico(data.tipoDoServico)
                 setDataAgendada(data.start.split("T")[0])
                 setHorarioInicial(data.start.split("T")[1])
-
-                console.log(dataAgendada)
             }
         }
 
         fetchAgendamentoUnico()
-    }, [id, navigate])
+    }, [agendamentosId, navigate])
 
     const salvarAlteracaoAgendamento = async(e) => {
         e.preventDefault()
@@ -63,10 +61,11 @@ const AtualizarServico = () => {
         const data = await supabase
             .from('agendamentos')
             .update({title, start, end, tipoDoServico})
-            .eq('id', id)
+            .eq('id', agendamentosId)
             
         console.log(data)
         setFormError(null)
+        navigate('/CriarAgendamento')
     }
     
     return(
@@ -112,4 +111,4 @@ const AtualizarServico = () => {
     )
 }
 
-export default AtualizarServico
+export default AtualizarAgendamento

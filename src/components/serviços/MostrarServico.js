@@ -1,5 +1,6 @@
 import DeletarServico from "./DeletarServico";
 import FetchServicos from "./FetchServicos";
+import { Link } from "react-router-dom";
 
 function MostrarServico() {
   const servicos = FetchServicos();
@@ -26,7 +27,9 @@ function MostrarServico() {
                 className="card-footer"
                 style={{ display: "flex", justifyContent: "space-between" }}
               >
-                <button className="btn btn-primary">Editar</button>
+                <button className="btn btn-primary">
+                  <Link className="text-light link-underline" to={'/servicos/' + servico.id}>Editar</Link>
+                </button>
                 <button className="btn btn-danger" onClick={() => DeletarServico(servico.id)}>Excluir</button>
               </div>
             </div>

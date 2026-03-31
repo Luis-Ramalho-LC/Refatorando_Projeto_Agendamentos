@@ -22,10 +22,8 @@ function MostrarAgendamentos(){
                                 <h5 className="card-text">Serviço: {arrayTipoDoServico[1]}</h5>
                             </div>
                             <div className="card-footer" style={{display: "flex", justifyContent: "space-between"}}>
-                                <button className="btn btn-primary" /*data-bs-toggle="modal" data-bs-target={`#${agendamento.id}`}*/ >
-                                <Link to={'/' + agendamento.id}>
-                                    Editar
-                                </Link>
+                                <button className="btn btn-primary">
+                                <Link className="text-light link-underline" to={'/agendamentos/' + agendamento.id}>Editar</Link>
                                 </button>
                                 <button className="btn btn-danger" onClick={() => DeletarAgendamento(agendamento.id)}>Excluir</button>
                             </div>

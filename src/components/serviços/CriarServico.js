@@ -32,15 +32,15 @@ const CriarServico = () => {
             <form onSubmit={salvarServico}>
                 <div className="mb-3">
                     <label htmlFor="inputNomeServico">Nome Do Servico:</label>
-                    <input id="inputNomeServico" className="form-control" type="text" placeholder="Nome do Serviço" value={nome} onChange={(e) => setNome(e.target.value)}></input>
+                    <input id="inputNomeServico" className="form-control" type="text" placeholder="Exemplo" value={nome} onChange={(e) => setNome(e.target.value)}></input>
                 </div>
                  <div className="mb-3">
                     <label htmlFor="inputPrecoServico">Preço Do Serviço:</label>
-                    <input id="inputPrecoServico" className="form-control" type="number" placeholder='Preço Do Serviço' value={preco} onChange={(e) => setPreco(e.target.value)}></input>
+                    <input id="inputPrecoServico" className="form-control" type="number" placeholder='Preço em R$' value={preco} onChange={(e) => setPreco(e.target.value)}></input>
                 </div>
                  <div className="mb-3">
                     <label htmlFor="inputTempoServico">Tempo Gasto no Serviço:</label>
-                    <input id="inputTempoServico" className="form-control" type="number" placeholder='Tempo Gasto no Serviço' value={tempo} onChange={(e) => setTempo(e.target.value)}></input>
+                    <input id="inputTempoServico" className="form-control" type="number" placeholder='Tempo em Minutos' value={tempo} onChange={(e) => setTempo(e.target.value)}></input>
                 </div>
                 <button className="btn btn-primary" type="submit">Salvar</button>
                 {formError && <p className="erro">{formError}</p>}
