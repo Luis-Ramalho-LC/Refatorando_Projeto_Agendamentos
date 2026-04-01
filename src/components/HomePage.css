@@ -34,4 +34,37 @@
 
 .fc-media-screen{
     height: 40rem;
+    margin: auto;
+}
+
+@media (min-width: 650px){
+    .fc-media-screen{
+    height: 40rem;
+    width: 90%;
+    margin: auto;
+    }
+}
+
+@media (min-width: 1000px){
+    .fc-media-screen{
+    height: 40rem;
+    width: 80%;
+    margin: auto;
+    }
+}
+
+@media (min-width: 1400px){
+    .fc-media-screen{
+    height: 30rem;
+    width: 75%;
+    margin: auto;
+    }
+}
+
+@media (min-width: 1800px){
+    .fc-media-screen{
+    height: 30rem;
+    width: 70%;
+    margin: auto;
+    }
 }

@@ -3,6 +3,7 @@ import {useState} from 'react'
 import Header from '../Header'
 import Footer from '../Footer'
 import MostrarServico from './MostrarServico'
+import './CriarServico.css'
 
 const CriarServico = () => {
     const [nome, setNome] = useState('')
@@ -27,9 +28,9 @@ const CriarServico = () => {
     }
 
     return(
-        <div>
+        <div className='CriarServico'>
             <Header/>
-            <form onSubmit={salvarServico}>
+            <form onSubmit={salvarServico} className='formCriarServico'>
                 <div className="mb-3">
                     <label htmlFor="inputNomeServico">Nome Do Servico:</label>
                     <input id="inputNomeServico" className="form-control" type="text" placeholder="Exemplo" value={nome} onChange={(e) => setNome(e.target.value)}></input>
@@ -42,7 +43,7 @@ const CriarServico = () => {
                     <label htmlFor="inputTempoServico">Tempo Gasto no Serviço:</label>
                     <input id="inputTempoServico" className="form-control" type="number" placeholder='Tempo em Minutos' value={tempo} onChange={(e) => setTempo(e.target.value)}></input>
                 </div>
-                <button className="btn btn-primary" type="submit">Salvar</button>
+                <button className="btn btn-primary btn-salvar-servico" type="submit">Salvar</button>
                 {formError && <p className="erro">{formError}</p>}
             </form>
             <MostrarServico/>

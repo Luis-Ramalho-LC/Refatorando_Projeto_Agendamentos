@@ -70,7 +70,7 @@ const AtualizarAgendamento = () => {
     }
     
     return(
-        <>
+        <div id="atualizarAgendamento">
         <Header/>
         <div className="card text-center m-3 formAtualizar">
             <form onSubmit={salvarAlteracaoAgendamento}>
@@ -107,8 +107,9 @@ const AtualizarAgendamento = () => {
             {formError && <p className="erro">{formError}</p>}
             </form>
         </div>
+        <div id="a"></div>
         <Footer/>
-        </>
+        </div>
     )
 }
 

@@ -1,9 +1,17 @@
 .formAtualizar{
     background-color: lightgray;
+}
+
+#a{
+    height: 10.5rem;
+}
+
+#atualizarServico, #atualizarAgendamento{
+    position: relative;
     top: 4rem;
 }
 
-#rodape{
+footer{
     position: fixed;
 }
 

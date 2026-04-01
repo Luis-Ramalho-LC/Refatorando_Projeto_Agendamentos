@@ -1,48 +1,27 @@
-#form-criar{
-    max-width: 90%;
-    margin: 0 5%;
-    border-radius: 1rem;
-    background-color: lightgray;
-    margin-bottom: 1rem;
-    padding: 1rem;
-}
-
-.ultima-row-form{
-    display: grid;
-    grid-template-columns: 56% 44%;
-}
-
-.btn-salvar{
-    margin-left: 1rem;
-}
-
-.Form-agendamento{
+.CriarServico{
     position: relative;
     top: 4rem;
 }
 
-.listaServicos{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-}
-
-.card-agendamento{
-    width: 100%;
+.formCriarServico{
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
     background-color: lightgray;
 }
 
-.erro{
-    border:3px solid rgb(255, 46, 46);
-    background-color: rgb(255, 143, 143);
-    border-radius: 1ex;
-    padding: 1ex;
+.card-servico{
+    background-color: lightgray;
     color: black;
-    margin-top: 1ex;
+}
+
+.btn-salvar-servico{
+    width: 50%;
+    margin: 0 25%;
 }
 
 @media (min-width: 650px){
-    .listaServicos{
+    .listaAgendamentos{
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: auto;
@@ -54,7 +33,7 @@
 }
 
 @media (min-width: 1000px){
-    .listaServicos{
+    .listaAgendamentos{
         display: grid;
         grid-template-columns: 33% 34% 33%;
         grid-template-rows: auto;
@@ -67,26 +46,26 @@
 }
 
 @media (min-width: 1400px){
-    .listaServicos{
+    .listaAgendamentos{
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: auto;
     }
 
-    .card-servico{
+    .card-agendamento{
     width: 100%;
     background-color: lightgray;
     }   
 }
 
 @media (min-width: 1800px){
-    .listaServicos{
+    .listaAgendamentos{
         display: grid;
         grid-template-columns: 20% 20% 20% 20% 20%;
         grid-template-rows: auto;
     }
 
-    .card-servico{
+    .card-agendamento{
     width: 100%;
     background-color: lightgray;
     }   

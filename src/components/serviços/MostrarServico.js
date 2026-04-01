@@ -12,7 +12,7 @@ function MostrarServico() {
           {servicos.map((servico) => (
             <div
               key={servico.id}
-              className="card text-bg-secondary mb-3"
+              className="card mb-3 card-servico"
               style={{ maxWidth: "20rem", margin: "auto" }}
             >
               <h2 className="card-header">{servico.nome}</h2>
