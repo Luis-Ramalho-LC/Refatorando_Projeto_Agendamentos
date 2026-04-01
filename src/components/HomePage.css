@@ -1,0 +1,37 @@
+#cabecalho{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+}
+
+#rodape{
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+#homePageBody{
+    position: relative;
+    top: 4rem;
+    height: 100%;
+}
+
+#contatoInfo{
+    text-align: center;
+}
+
+.nav-item{
+    border-bottom: 1px solid gray;
+    max-width: 7rem;
+    margin-right: 1rem;
+}
+
+.fc-toolbar-chunk{
+    max-width: 50%;
+    text-align: center;
+}
+
+.fc-media-screen{
+    height: 40rem;
+}

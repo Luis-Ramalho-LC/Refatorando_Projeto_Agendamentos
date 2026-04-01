@@ -1,9 +1,8 @@
 import FullCalendar from '@fullcalendar/react'
-//import dayGridPlugin from '@fullcalendar/daygrid'
 import listPlugin from '@fullcalendar/list';
-//import timeGridPlugin from '@fullcalendar/timegrid'
 import { useState, useEffect } from 'react';
 import supabase from '../config/supabaseClient';
+import './HomePage.css'
 
 export default function Calendar() {
   const [agendamentos, setAgendamentos] = useState("")
@@ -25,6 +24,12 @@ export default function Calendar() {
       initialView = "listDay"
       locale = 'pt-br'
       events = {agendamentos}
+      headerToolbar = {
+        {
+          start: 'title',
+          end: 'today prev,next'
+        }
+      }
     />
   )
 }
