@@ -13,7 +13,7 @@ function MostrarAgendamentos(){
                     {agendamentos.map(agendamento => (
                         arrayTipoDoServico = agendamento.tipoDoServico.split('/'),
                             
-                        <div key={agendamento.id} className="card text-bg-secondary mb-3" style={{maxWidth: "20rem", margin: "auto"}}>
+                        <div key={agendamento.id} className="card mb-3" style={{maxWidth: "20rem", margin: "auto"}}>
                             <h2 className="card-header">{agendamento.title}</h2>
                             <div className="card-body">
                                 <h5 className="card-text">Data: {agendamento.start.slice(0, 10)}</h5>

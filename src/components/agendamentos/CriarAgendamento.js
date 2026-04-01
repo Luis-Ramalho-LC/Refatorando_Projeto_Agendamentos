@@ -5,6 +5,7 @@ import Footer from "../Footer";
 import MostrarAgendamentos from "./MostrarAgendamentos";
 import moment from "moment";
 import FetchServicos from "../serviços/FetchServicos";
+import './CriarAgendamento.css'
 
 const CriarAgendamento = () => {
   const [title, setTitle] = useState("");
@@ -41,7 +42,7 @@ const CriarAgendamento = () => {
   return (
     <div className="Form-agendamento">
       <Header />
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} id="form-criar">
         <div className="mb-3">
           <label htmlFor="NomeCliente" className="form-label">Nome Do Cliente:</label>
           <input type="text" className="form-control" id="NomeCliente" placeholder="Fulano Da Silva" value={title} onChange={(e) => setTitle(e.target.value)} />
@@ -54,14 +55,16 @@ const CriarAgendamento = () => {
           <label htmlFor="HorarioInicial" className="form-label">Horário agendado:</label>
           <input type="time" className="form-control" id="HorarioInicial" value={horarioInicial} onChange={(e) => setHorarioInicial(e.target.value)} />
         </div>
-        <select id="SelecionarServico" className="form-select" aria-label="Default select example" onChange={(e) => setTipoDoServico(e.target.value)} >
-          <option value={null}>Selecionar Serviço</option>
-          {servicos &&
-            servicos.map((servico) => (
-              <option key={servico.id} value={servico.tempo + "/" + servico.nome} >{servico.nome}</option>
-            ))}
-        </select>
-        <button className="btn btn-primary" type="submit">Salvar</button>
+        <div className="ultima-row-form">
+          <select id="SelecionarServico" className="form-select" aria-label="Default select example" onChange={(e) => setTipoDoServico(e.target.value)} >
+            <option value={null}>Selecionar Serviço</option>
+            {servicos &&
+              servicos.map((servico) => (
+                <option key={servico.id} value={servico.tempo + "/" + servico.nome} >{servico.nome}</option>
+              ))}
+          </select>
+          <button className="btn btn-primary btn-salvar" type="submit">Salvar</button>
+        </div>
         {formError && <p className="erro">{formError}</p>}
       </form>
       <MostrarAgendamentos />

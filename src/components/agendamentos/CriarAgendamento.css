@@ -1,0 +1,93 @@
+#form-criar{
+    max-width: 90%;
+    margin: 0 5%;
+    border-radius: 1rem;
+    background-color: lightgray;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.ultima-row-form{
+    display: grid;
+    grid-template-columns: 56% 44%;
+}
+
+.btn-salvar{
+    margin-left: 1rem;
+}
+
+.Form-agendamento{
+    position: relative;
+    top: 4rem;
+}
+
+.listaAgendamentos{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+}
+
+.card{
+    width: 100%;
+    background-color: lightgray;
+}
+
+.erro{
+    border:3px solid rgb(255, 46, 46);
+    background-color: rgb(255, 143, 143);
+    border-radius: 1ex;
+    padding: 1ex;
+    color: black;
+    margin-top: 1ex;
+}
+
+@media (min-width: 650px){
+    .listaAgendamentos{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+    }
+
+    header, footer, p{
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1000px){
+    .listaAgendamentos{
+        display: grid;
+        grid-template-columns: 33% 34% 33%;
+        grid-template-rows: auto;
+    }
+
+    .contatos{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media (min-width: 1400px){
+    .listaAgendamentos{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto;
+    }
+
+    .card{
+    width: 100%;
+    background-color: lightgray;
+    }   
+}
+
+@media (min-width: 1800px){
+    .listaAgendamentos{
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: auto;
+    }
+
+    .card{
+    width: 100%;
+    background-color: lightgray;
+    }   
+}
