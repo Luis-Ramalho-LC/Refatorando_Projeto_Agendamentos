@@ -27,7 +27,7 @@
     grid-template-rows: auto;
 }
 
-.card{
+.card-agendamento{
     width: 100%;
     background-color: lightgray;
 }
@@ -73,7 +73,7 @@
         grid-template-rows: auto;
     }
 
-    .card{
+    .card-agendamento{
     width: 100%;
     background-color: lightgray;
     }   
@@ -86,7 +86,7 @@
         grid-template-rows: auto;
     }
 
-    .card{
+    .card-agendamento{
     width: 100%;
     background-color: lightgray;
     }   

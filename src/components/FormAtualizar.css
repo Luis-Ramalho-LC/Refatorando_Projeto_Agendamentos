@@ -1,0 +1,22 @@
+.formAtualizar{
+    background-color: lightgray;
+    top: 4rem;
+}
+
+#rodape{
+    position: fixed;
+}
+
+.btn-atualizar{
+    width: 50%;
+}
+
+.erro{
+    margin: 1rem;
+}
+
+@media (min-width: 600px){
+    div, label{
+        font-size: 20px;
+    }
+}

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import supabase from "../../config/supabaseClient"
 import FetchServicos from "../serviços/FetchServicos"
 import moment from "moment"
+import '../FormAtualizar.css'
 
 const AtualizarAgendamento = () => {
     const {agendamentosId} = useParams()
@@ -71,7 +72,7 @@ const AtualizarAgendamento = () => {
     return(
         <>
         <Header/>
-        <div className="card text-center m-3">
+        <div className="card text-center m-3 formAtualizar">
             <form onSubmit={salvarAlteracaoAgendamento}>
             <div className="card-header">Alterar Agendamento</div>
             <div className="card-body">
@@ -101,7 +102,7 @@ const AtualizarAgendamento = () => {
                 </div>
             </div>
             <div className="card-footer text-body-secondary">
-                <button className="btn btn-primary">Salvar</button>
+                <button className="btn btn-primary btn-atualizar">Salvar</button>
             </div>
             {formError && <p className="erro">{formError}</p>}
             </form>

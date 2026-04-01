@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Header from "../Header"
 import Footer from "../Footer"
 import supabase from "../../config/supabaseClient";
+import '../FormAtualizar.css'
 
 function AtualizarServico(){
     const {servicosId} = useParams()
@@ -55,7 +56,7 @@ function AtualizarServico(){
     return(
         <>
         <Header/>
-        <div className="card text-center m-3">
+        <div className="card text-center m-3 formAtualizar">
         <form onSubmit={salvarAlteracaoServico}>
             <div className="card-header">Alterar Serviço</div>
             <div className="card-body">
@@ -76,7 +77,7 @@ function AtualizarServico(){
                 </div>
             </div>
             <div className="card-footer text-body-secondary">
-                <button className="btn btn-primary" type="submit">Salvar</button>
+                <button className="btn btn-primary btn-atualizar" type="submit">Salvar</button>
             </div>
             {formError && <p className="erro">{formError}</p>}
         </form>
